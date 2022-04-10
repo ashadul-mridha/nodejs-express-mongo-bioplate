@@ -1,0 +1,126 @@
+{
+	"info": {
+		"_postman_id": "a88673b3-ab47-4287-a6d8-547679c68a92",
+		"name": "Letter Management",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "auth",
+			"item": [
+				{
+					"name": "add new user",
+					"protocolProfileBehavior": {
+						"strictSSL": false
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Rafa\",\r\n    \"email\":\"rafa@gmail.com\",\r\n    \"password\":\"12343467\"\r\n}"
+						},
+						"url": {
+							"raw": "{{Domain}}/user",
+							"host": [
+								"{{Domain}}"
+							],
+							"path": [
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all users",
+					"protocolProfileBehavior": {
+						"strictSSL": false
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Domain}}/users",
+							"host": [
+								"{{Domain}}"
+							],
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get single user",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Domain}}/user/6252a360f680b992d0c0551d",
+							"host": [
+								"{{Domain}}"
+							],
+							"path": [
+								"user",
+								"6252a360f680b992d0c0551d"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete User",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{Domain}}/user/6252a0f8189e5d4b479f358e",
+							"host": [
+								"{{Domain}}"
+							],
+							"path": [
+								"user",
+								"6252a0f8189e5d4b479f358e"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update User",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Adib Molla\",\r\n    \"email\":\"ashadul@gmail.com\",\r\n    \"password\":\"4234234\"\r\n}"
+						},
+						"url": {
+							"raw": "{{Domain}}/user",
+							"host": [
+								"{{Domain}}"
+							],
+							"path": [
+								"user"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
